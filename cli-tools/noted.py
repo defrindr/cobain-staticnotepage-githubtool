@@ -11,7 +11,7 @@ with open('config.json','r') as files:
     settings = json.loads(''.join(files.readlines()))
 
 def getJson():
-    req = requests.get('https://api.github.com/repos/defrindr/noted/contents/noted/__noted.json')
+    req = requests.get('https://api.github.com/repos/'+settings['GITHUB_USERNAME']+'/noted/contents/assets/noted/source.json')
     return req.json()
 
 jsonData = getJson()
@@ -39,7 +39,7 @@ content.append({
 })
 
 payloads = {
-    "path": "noted/__noted.json",
+    "path": "assets/noted/source.json",
     "message": "Update "+today,
     "content": encode(json.dumps(content).encode()).decode()+"\n",
     "branch": "master",
@@ -53,7 +53,7 @@ headers = {
 confirm = input(Fore.YELLOW+'[?] Apakah Anda Yakin [y/n] ? ')
 
 if confirm.lower() == "y":
-    res = requests.put('https://api.github.com/repos/'+settings['GITHUB_USERNAME']+'/noted/contents/noted/__noted.json',headers=headers,json=payloads)
+    res = requests.put('https://api.github.com/repos/'+settings['GITHUB_USERNAME']+'/noted/contents/assets/noted/source.json',headers=headers,json=payloads)
     res = res.json()
     if res['content']:
         print(Fore.GREEN+"[+] Berhasil meng-update note.")
