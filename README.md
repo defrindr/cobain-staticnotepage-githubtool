@@ -27,6 +27,7 @@ cd cli-tools
 ```
 pip install requirements.txt
 ```
+* Copy ```config.json.example``` menjadi ```config.json```
 * Masukkan token & username github kalian ke ```cli-tools/config.json```
     * Untuk mendapatkan token bisa dilihat [disini](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 
@@ -35,6 +36,10 @@ pip install requirements.txt
 python noted.py
 ```
 ![img](assets/images/snapshot.png)
+
+# Tips
+Untuk memudahkan dalam menggunakan tool cli kalian dapat menambahkannya kedalam shell alias. [Untuk tutorial bisa dilihat disini](https://shapeshed.com/unix-alias/) 
+
 
 ## Kontribusi
 Akan terasa sangat menyenangkan jika kalian dapat membantu mengembangkan repository ini. Saya akan sangat berterimakasih untuk itu.
