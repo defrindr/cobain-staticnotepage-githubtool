@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani|Varela+Round&display=swap');
+
+html,body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background: linear-gradient(0deg, #eccb70,#be7d57);
+    font-family: 'Rajdhani',cursive;
+}
+
+#header {
+    text-align: center;
+    padding: 1rem 0 2rem;
+    border-bottom: 2px dashed #3f4140;
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+#header h1 {
+    font-size: 3.4rem;
+    font-family: 'Varela Round',sans-serif;
+    margin: 0;
+    padding: 1.4rem 0 .8rem;
+}
+
+a {
+    color: #be7d57;
+    text-decoration: none;
+    font-weight: bold
+}
+
+.wrapper {
+    width: 60%;
+    display: block;
+    margin: 6rem auto 1.4rem;
+    padding: 1.4rem;
+    background-color: #fff;
+}
+
+#main {
+    display: block;
+    width: 80%;
+    margin: 5rem auto;
+}
+
+.post {
+    padding: 0 1rem 1rem;
+    border: 2px dashed #3f4140;
+    margin: 0 0 2rem;
+    position: relative;
+}
+
+
+.post_date {
+    color: #be7d57;
+    font-weight: bolder
+}
+.postedon__label {
+    padding: 1rem .5rem .5rem 0;
+    margin: 0;
+    display: inline-block;
+    border-bottom: 2px dashed #3f4140;
+}
+
+#footer {
+    border-top: 2px dashed #3f4140;
+    display: block;
+    padding: .5rem 0 0;
+    width: 80%;
+    margin: 1rem auto 0;
+}
+
+
+@media all and (max-width: 480px){
+    .wrapper {
+        margin-top: 1.4rem;
+        width: 80%;
+    }
+    #header,#main,#footer {
+        width: 90%;
+    }
+    #header h1 {
+        font-size: 2rem;
+    }
+}
