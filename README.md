@@ -1,4 +1,4 @@
-# Simple Github Page Noted
+# Simple Github Noted Page
 Sebuah repository yang dapat digunakan untuk catatan ketika gabut / menjadi tempat curhat dikala galau :)
 
 ## Cara Menggunakan
