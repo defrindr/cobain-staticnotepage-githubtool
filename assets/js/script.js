@@ -1,6 +1,6 @@
 let webSettings = async () => {
     let grepConf = () => {
-        return fetch('../../config.json').then((data) => {
+        return fetch('config.json').then((data) => {
             return data.json();
         })
     }
