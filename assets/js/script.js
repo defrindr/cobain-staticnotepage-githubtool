@@ -92,7 +92,7 @@ let confNoted = async () => {
     }
 
     let grepNote = async () => {
-        return fetch('http://localhost:8080/noted/__noted.json').then((data) => {
+        return fetch('/noted/__noted.json').then((data) => {
             return data.json();
         });
     }
