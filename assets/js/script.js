@@ -64,7 +64,7 @@ let webSettings = async () => {
 let confNoted = async () => {
     let conf = {
         target: document.querySelector('#posts'),
-        template: (post, date) => {
+        template: (post, date, time) => {
             let div = document.createElement('div');
             div.setAttribute('class', 'post');
 
@@ -73,13 +73,18 @@ let confNoted = async () => {
 
             let spanDateLabel = document.createElement('span');
             spanDateLabel.setAttribute('class', 'postedOnText');
+            
+            let spanDateContainer = document.createElement('p');
+            spanDateContainer.setAttribute('class','span_date__container');
 
             let spanDateContent = document.createElement('span');
             spanDateContent.setAttribute('class', 'post_date');
-            spanDateContent.innerHTML = ` ${date}`;
+            spanDateContent.innerHTML = `&#8987; ${date}<br>&#8986; ${time}`;
+
+            spanDateContainer.appendChild(spanDateContent);
 
             pLabel.appendChild(spanDateLabel);
-            pLabel.appendChild(spanDateContent);
+            pLabel.appendChild(spanDateContainer);
 
             let pContent = document.createElement('p');
             pContent.innerHTML = `${post.replace('\n','<br>')}`;
@@ -112,8 +117,9 @@ let confNoted = async () => {
     propSort(files,'date',true);
 
     files.filter((file) => {
+        let [date,time] = file.date.split(' ');
         conf.target.appendChild(
-            conf.template(file.post, file.date)
+            conf.template(file.post, date, time)
         );
     })
 
