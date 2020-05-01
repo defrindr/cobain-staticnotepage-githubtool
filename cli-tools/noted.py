@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 import requests
 import json
 from base64 import b64decode as decode,b64encode as encode
@@ -28,7 +28,7 @@ class noted:
         return [sha,content]
 
     def getDateToday(self):
-        today = date.today().strftime("%Y-%m-%d");
+        today = datetime.today().strftime("%Y-%m-%d %H:%M:%S");
         return today
 
     def getInputuser(self):
