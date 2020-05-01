@@ -47,6 +47,12 @@ a {
     margin: 5rem auto;
 }
 
+.span_date__container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0 .5rem .5rem 0;
+}
+
 .post {
     padding: 0 1rem 1rem;
     border: 2px dashed #3f4140;
@@ -60,7 +66,7 @@ a {
     font-weight: bolder
 }
 .postedon__label {
-    padding: 1rem .5rem .5rem 0;
+    padding: .5rem .5rem .5rem 0;
     margin: 0;
     display: inline-block;
     border-bottom: 2px dashed #3f4140;
